@@ -89,6 +89,7 @@ void CollisionSystem::calculate()
 		{
 			if (collision(m_collisionObjects[elem.first].collisionShape.aabb, m_collisionObjects[elem.second].collisionShape.aabb))
 			{
+				//TODO narrow phase collision detection
 				m_collisionObjects[elem.first].collision->push_back(m_collisionObjects[elem.first].id);
 				m_collisionObjects[elem.second].collision->push_back(m_collisionObjects[elem.second].id);
 			}
